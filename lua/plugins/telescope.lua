@@ -20,17 +20,17 @@ return {
     {
       ";;",
       function()
-        require('telescope.builtin').resume()
+        require("telescope.builtin").resume()
       end,
-      desc = 'find in current buffer'
+      desc = "find in current buffer",
     },
     -- display the buffers via telescope:
     {
       "<leader><leader>",
       function()
-        require('telescope.builtin').buffers({})
+        require("telescope.builtin").buffers({})
       end,
-      desc = 'find buffers'
+      desc = "find buffers",
     },
     -- add a keymap to browse plugin files
     {
