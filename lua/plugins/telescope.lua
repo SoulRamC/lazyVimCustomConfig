@@ -40,5 +40,13 @@ return {
       end,
       desc = "Find Plugin File",
     },
+    -- add a keymap to show diagnostics
+    {
+      ";e",
+      function()
+        require("telescope.builtin").diagnostics({})
+      end,
+      desc = "Show Diagnostics",
+    },
   },
 }

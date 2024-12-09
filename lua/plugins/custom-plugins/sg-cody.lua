@@ -13,15 +13,15 @@ return {
     end,
   },
 
-  {
-    "nvim-cmp",
-    optional = true,
-    opts = function(_, opts)
-      table.insert(opts.sources, 1, {
-        name = "cody",
-        group_index = 1,
-        priority = 100,
-      })
-    end,
-  },
+  -- {
+  --   "nvim-cmp",
+  --   optional = true,
+  --   opts = function(_, opts)
+  --     table.insert(opts.sources, 1, {
+  --       name = "cody",
+  --       group_index = 1,
+  --       priority = 100,
+  --     })
+  --   end,
+  -- },
 }

@@ -2,6 +2,21 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
+      emmet_language_server = {
+        filetypes = {
+          "css",
+          "eruby",
+          "html",
+          "javascript",
+          "javascriptreact",
+          "less",
+          "sass",
+          "scss",
+          "pug",
+          "typescriptreact",
+          "blade",
+        },
+      },
       --- @deprecated -- tsserver renamed to ts_ls but not yet released, so keep this for now
       tsserver = {
         enabled = false,
