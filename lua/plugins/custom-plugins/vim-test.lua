@@ -9,6 +9,11 @@ return {
     { "<leader>tg", "<cmd>TestVisit<cr>", desc = "Test Visit" },
   },
   config = function()
+    -- Use vimux strategy for tests
     vim.cmd("let test#strategy = 'vimux'")
+
+    -- Set Vimux to split the tmux pane vertically
+    vim.g.VimuxOrientation = "h" -- 'v' for vertical split
+    vim.g.VimuxHeight = "40" -- Optional: set height/width percentage
   end,
 }
