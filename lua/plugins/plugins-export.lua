@@ -6,6 +6,6 @@ return {
   require("plugins.custom-plugins.cellular-animation"),
   require("plugins.custom-plugins.vim-fiugitive"),
   -- require("plugins.custom-plugins.avante-ai"),
-  require("plugins.custom-plugins.sg-cody"),
+  -- require("plugins.custom-plugins.sg-cody"),
   -- require("plugins.custom-plugins.tree-sitter"),
 }

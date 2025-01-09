@@ -15,6 +15,7 @@ return {
           "pug",
           "typescriptreact",
           "blade",
+          "php",
         },
       },
       --- @deprecated -- tsserver renamed to ts_ls but not yet released, so keep this for now

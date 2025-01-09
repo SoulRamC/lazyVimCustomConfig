@@ -1,50 +1,48 @@
 return {
-  "nvim-telescope/telescope.nvim",
-  defaults = {
-    file_ignore_patterns = { "node_modules" },
-  },
+  "ibhagwan/fzf-lua",
+  -- config = function()
+  --   require("fzf-lua").setup({
+  --     -- Optional: ignore node_modules globally
+  --     fzf_opts = { ["--file-ignore"] = "node_modules" },
+  --   })
+  -- end,
   keys = {
     {
       "<leader>ff",
-      false,
+      false, -- Remove old keybinding
     },
     {
-      -- change a keymap
       ";f",
       function()
-        require("telescope.builtin").find_files({})
+        require("fzf-lua").files()
       end,
       desc = "Find Files",
     },
-    -- display the last used search via telescope:
     {
       ";;",
       function()
-        require("telescope.builtin").resume()
+        require("fzf-lua").resume()
       end,
-      desc = "find in current buffer",
+      desc = "Resume Last Search",
     },
-    -- display the buffers via telescope:
     {
       "<leader><leader>",
       function()
-        require("telescope.builtin").buffers({})
+        require("fzf-lua").buffers()
       end,
-      desc = "find buffers",
+      desc = "Find Buffers",
     },
-    -- add a keymap to browse plugin files
     {
       "<leader>fp",
       function()
-        require("telescope.builtin").find_files({ hidden = true, no_ignore = true })
+        require("fzf-lua").files({ hidden = true, no_ignore = true })
       end,
       desc = "Find Plugin File",
     },
-    -- add a keymap to show diagnostics
     {
       ";e",
       function()
-        require("telescope.builtin").diagnostics({})
+        require("fzf-lua").diagnostics_workspace()
       end,
       desc = "Show Diagnostics",
     },
