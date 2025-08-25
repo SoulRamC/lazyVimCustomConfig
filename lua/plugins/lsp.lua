@@ -1,13 +1,21 @@
+local util = require("lspconfig.util")
 return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
+      volar = {
+        filetypes = {
+          "typescript",
+          "vue",
+        },
+        root_dir = util.root_pattern("src/App.vue"),
+      },
+      tailwindcss = {},
       emmet_language_server = {
         filetypes = {
           "css",
           "eruby",
           "html",
-          "javascript",
           "javascriptreact",
           "less",
           "sass",
@@ -15,7 +23,6 @@ return {
           "pug",
           "typescriptreact",
           "blade",
-          "php",
         },
       },
       --- @deprecated -- tsserver renamed to ts_ls but not yet released, so keep this for now
@@ -28,6 +35,7 @@ return {
       vtsls = {
         -- Default filetypes for TypeScript
         filetypes = {
+          "vue",
           "javascript",
           "javascriptreact",
           "javascript.jsx",
